@@ -50,7 +50,7 @@ public class Combo {
         }
     }
     
-    public void displayCombo() => Console.WriteLine({this.burguer}, {this.dessert}, {this.drink});
+    public void displayCombo() => Console.WriteLine($"COMBO:\n{burguer.Description}, R${burguer.Price}, {burguer.Grams}g\n{dessert.Description}, R${dessert.Price}, {dessert.Size}\n{drink.Description}, R${drink.Price}, {drink.Milliliter}");
 }
 
 public class Product{
@@ -65,6 +65,7 @@ public class Burguer : Product{
     private int _grams;
     
     public int Grams { get => _grams; set => _grams = value; }
+    
 }
 
 public class Dessert : Product{
